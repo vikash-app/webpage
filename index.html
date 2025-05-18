@@ -1,13 +1,12 @@
-
 <!DOCTYPE html>
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Willkommen auf meiner Seite</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #f4f4f9;
       color: #333;
       margin: 0;
@@ -15,19 +14,54 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 1rem;
+      width: 100%;
+      text-align: center;
+    }
+    main {
+      padding: 2rem;
+      max-width: 800px;
+      background-color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      margin-top: 2rem;
     }
     h1 {
+      color: #4CAF50;
+    }
+    h2 {
       color: #4a90e2;
     }
     p {
       font-size: 1.2em;
     }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 2rem;
+    }
   </style>
 </head>
 <body>
-  <h1>👋 Hallo!</h1>
-  <p>Dies ist meine persönliche Webseite. Mehr Inhalte folgen bald.</p>
+  <header>
+    <h1>👋 Hallo!</h1>
+    <p>Dies ist meine persönliche Webseite. Mehr Inhalte folgen bald.</p>
+  </header>
+  <main>
+    <h2>Über mich</h2>
+    <p>Ich bin begeistert von Technik, Design und allem, was einfach und funktional ist.</p>
+
+    <h2>Kontakt</h2>
+    <p>Du kannst mich unter <a href="mailto:test@example.com">test@example.com</a> erreichen.</p>
+  </main>
+  <footer>
+    &copy; 2025 Vikash Kumar
+  </footer>
 </body>
 </html>
