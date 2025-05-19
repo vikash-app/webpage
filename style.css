@@ -1,7 +1,7 @@
 body {
   font-family: Verdana, sans-serif;
-  background-color: #f4f4f9;
-  color: #333;
+  background-color: #2563EB;
+  color: #A78BFA;
   margin: 0;
   padding: 0;
   display: flex;
@@ -11,7 +11,7 @@ body {
   height: 200vh;
 }
 h1 {
-  color: #4a90e2;
+  color: #FB923C;
 }
 p {
   font-size: 1.2em;
