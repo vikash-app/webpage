@@ -1,25 +1,87 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Willkommen auf meiner Seite</title>
- <link rel="stylesheet" href="css/style.css"> 
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>My Family</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <h1>👋 Hallo! I am Vikash</h1>
-    <p>Dies ist meine persönliche Webseite. Mehr Inhalte folgen bald.</p>
+    <nav>
+      <h1 class="brand">My Family</h1>
+      <ul>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#members">Family</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <img src="family-hero.jpg" alt="Vikash Family" class="hero-img"/>
+      <div class="hero-text">
+        <h2>Welcome to Our Colorful World!</h2>
+        <p>Life is better together. Discover our adventures, moments, and memories.</p>
+      </div>
+    </div>
   </header>
   <main>
-    <h2>Über mich</h2>
-    <p>Ich bin begeistert von Technik, Design und allem, was einfach und funktional ist.</p>
-
-    <h2>Kontakt</h2>
-    <p>Du kannst mich unter <a href="mailto:contact@vikash.app">contact@vikash.app</a> erreichen.</p>
+    <section id="about" class="card bright-gradient">
+      <h2>About Us</h2>
+      <p>
+        We are the a tight-knit, fun-loving family who believes in the power of laughter, love, and adventure! From weekend road trips to cozy movie nights, we cherish every moment together. This website is our digital scrapbook—enjoy exploring our world!
+      </p>
+    </section>
+    <section id="gallery" class="card">
+      <h2>Gallery</h2>
+      <div class="gallery-grid">
+        <img src="gallery1.jpg" alt="Family trip">
+        <img src="gallery2.jpg" alt="Birthday party">
+        <img src="gallery3.jpg" alt="Picnic day">
+        <img src="gallery4.jpg" alt="Holiday time">
+      </div>
+    </section>
+    <section id="members" class="card bright-gradient">
+      <h2>Meet the Family</h2>
+      <div class="members-grid">
+        <div class="member-card">
+          <img src="mom.jpg" alt="Mom">
+          <h3>Sonal</h3>
+          <p>The creative force—loves cooking, painting, and keeping our lives colorful.</p>
+        </div>
+        <div class="member-card">
+          <img src="dad.jpg" alt="Dad">
+          <h3>Vikash</h3>
+          <p>The adventurer—always planning our next road trip or backyard game.</p>
+        </div>
+        <div class="member-card">
+          <img src="kid1.jpg" alt="Emma">
+          <h3>Advika</h3>
+          <p>Our little scientist—curious about everything and a master of LEGO.</p>
+        </div>
+        <div class="member-card">
+          <img src="kid2.jpg" alt="Noah">
+          <h3>Arya</h3>
+          <p>The cutest—loves to laugh, dance, and charm everyone she meets.</p>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="card">
+      <h2>Contact Us</h2>
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:contact@vikash.app">contact@vikash.app</a></p>
+      </div>
+    </section>
   </main>
   <footer>
-    &copy; 2025 Vikash Kumar
+    <p>&copy; 2025 Vikash.app &mdash; Made with love <span style="color:#f43f5e;">&#10084;</span></p>
   </footer>
 </body>
 </html>
