@@ -2,87 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
-  <title>My Family</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name's Personal Site</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <aside class="sidebar">
+    <div class="avatar">
+      <img src="profile.jpg" alt="Your portrait">
+      <h2>Your Name</h2>
+    </div>
     <nav>
-      <h1 class="brand">My Family</h1>
       <ul>
-        <li><a href="#about">About Us</a></li>
-        <li><a href="#gallery">Gallery</a></li>
-        <li><a href="#members">Family</a></li>
-        <li><a href="#familytree">Family Tree</a></li>
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#photos">Photos</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
-    <div class="hero">
-      <img src="family-hero.jpg" alt="Vikash Family" class="hero-img"/>
-      <div class="hero-text">
-        <h2>Welcome to Our Colorful World!</h2>
-        <p>Life is better together. Discover our adventures, moments, and memories.</p>
-      </div>
-    </div>
-  </header>
+  </aside>
   <main>
-    <section id="about" class="card bright-gradient">
-      <h2>About Us</h2>
-      <p>
-        We are the a tight-knit, fun-loving family who believes in the power of laughter, love, and adventure! From weekend road trips to cozy movie nights, we cherish every moment together. This website is our digital scrapbook—enjoy exploring our world!
-      </p>
+    <section id="home" class="card center">
+      <h1>Welcome!</h1>
+      <p class="tagline">[A bright, personal greeting or tagline]</p>
     </section>
-    <section id="gallery" class="card">
-      <h2>Gallery</h2>
-      <div class="gallery-grid">
-        <img src="gallery1.jpg" alt="Family trip">
-        <img src="gallery2.jpg" alt="Birthday party">
-        <img src="gallery3.jpg" alt="Picnic day">
-        <img src="gallery4.jpg" alt="Holiday time">
-      </div>
+    <section id="about" class="card">
+      <h2>About Me</h2>
+      <p>[Your story, interests, or philosophy. This is not a resume!]</p>
+      <ul class="about-list">
+        <li>🌱 Hobby 1</li>
+        <li>🎨 Hobby 2</li>
+        <li>✨ Fun fact</li>
+      </ul>
     </section>
-    <section id="members" class="card bright-gradient">
-      <h2>Meet the Family</h2>
-      <div class="members-grid">
-        <div class="member-card">
-          <img src="mom.jpg" alt="Mom">
-          <h3>Sonal</h3>
-          <p>The creative force—loves cooking, painting, and keeping our lives colorful.</p>
-        </div>
-        <div class="member-card">
-          <img src="dad.jpg" alt="Dad">
-          <h3>Vikash</h3>
-          <p>The adventurer—always planning our next road trip or backyard game.</p>
-        </div>
-        <div class="member-card">
-          <img src="kid1.jpg" alt="Emma">
-          <h3>Advika</h3>
-          <p>Our little scientist—curious about everything and a master of LEGO.</p>
-        </div>
-        <div class="member-card">
-          <img src="kid2.jpg" alt="Noah">
-          <h3>Arya</h3>
-          <p>The cutest—loves to laugh, dance, and charm everyone she meets.</p>
-        </div>
+    <section id="photos" class="card">
+      <h2>Photos</h2>
+      <div class="photo-gallery">
+        <figure>
+          <img src="photo1.jpg" alt="Photo 1">
+          <figcaption>Photo Title 1</figcaption>
+        </figure>
+        <figure>
+          <img src="photo2.jpg" alt="Photo 2">
+          <figcaption>Photo Title 2</figcaption>
+        </figure>
+        <figure>
+          <img src="photo3.jpg" alt="Photo 3">
+          <figcaption>Photo Title 3</figcaption>
+        </figure>
+        <!-- Add more figures as needed -->
       </div>
     </section>
     <section id="contact" class="card">
-      <h2>Contact Us</h2>
-      <form class="contact-form">
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <textarea placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-      <div class="contact-info">
-        <p>Email: <a href="mailto:contact@vikash.app">contact@vikash.app</a></p>
-      </div>
+      <h2>Contact</h2>
+      <p>Let's connect:</p>
+      <ul class="social-links">
+        <li><a href="#">Email</a></li>
+      </ul>
     </section>
+    <footer>
+      <p>© 2025 Your Name. All rights reserved.</p>
+    </footer>
   </main>
-  <footer>
-    <p>&copy; 2025 Vikash.app &mdash; Made with love <span style="color:#f43f5e;">&#10084;</span></p>
-  </footer>
 </body>
 </html>
