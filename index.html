@@ -2,10 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>My World, My Story</title>
   <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@latest/ol.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
   <header class="hero">
@@ -19,19 +19,19 @@
   <main>
     <section class="section" id="travels">
       <h2>🌍 Places I've Travelled</h2>
-      <div id="map"></div>
+      <div id="map" style="width: 100%; height: 400px;"></div>
       <div class="map-tip">Click a marker for memories!</div>
     </section>
 
     <section class="section" id="memories">
-      <h2>📷 Memories</h2>
+      <h2>📝 Memories</h2>
       <div class="gallery">
         <div class="memory-card">
           <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Swiss Alps">
           <div class="caption">Summit at the Swiss Alps, 2024</div>
         </div>
         <div class="memory-card">
-          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Tokyo Night">
+          <img src="https://images.unsplash.com/photo-146510104046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Tokyo Night">
           <div class="caption">Neon lights in Tokyo, 2023</div>
         </div>
         <div class="memory-card">
@@ -43,7 +43,7 @@
     </section>
 
     <section class="section contact" id="contact">
-      <h2>💌 Contact Me</h2>
+      <h2>📬 Contact Me</h2>
       <div class="contact-card">
         <div class="email-label">Email:</div>
         <a href="mailto:contact@vikash.app" id="email-link">contact@vikash.app</a>
@@ -54,38 +54,100 @@
   </main>
 
   <footer>
-    <small>&copy; 2025 Vikash. Made with 🌏 and ☕</small>
+    <small>&copy; 2025 Vikash. Made with 🌏 and ❤️</small>
   </footer>
 
-  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <!-- OpenLayers JS -->
+  <script src="https://cdn.jsdelivr.net/npm/ol@latest/dist/ol.js"></script>
   <script>
-    // Initialize the map
-    var map = L.map('map').setView([20, 0], 2);
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
-      attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
-
-    // Example travel markers (add your own!)
+    // Travel locations with memories
     const travels = [
-  {lat: 52.5200, lng: 13.4050, place: "Berlin, Germany", memory: "Art, history, and vibrant city life in Berlin."},
-  {lat: 50.0755, lng: 14.4378, place: "Prague, Czech Republic", memory: "Charmed by the fairytale streets and old town of Prague."},
-  {lat: 48.2082, lng: 16.3738, place: "Vienna, Austria", memory: "Classical music, stunning palaces, and delicious coffee in Vienna."},
-  {lat: 54.4000, lng: 13.6167, place: "Binz, Germany", memory: "Relaxed by the Baltic Sea beaches in Binz."},
-  {lat: 52.3676, lng: 4.9041, place: "Amsterdam, Netherlands", memory: "Explored canals and art museums in Amsterdam."},
-  {lat: 51.0504, lng: 13.7373, place: "Dresden, Germany", memory: "Admired baroque architecture and river views in Dresden."},
-  {lat: 51.3397, lng: 12.3731, place: "Leipzig, Germany", memory: "Enjoyed live music and vibrant culture in Leipzig."},
-  {lat: 45.4408, lng: 12.3155, place: "Venice, Italy", memory: "Got lost in the magical alleys and canals of Venice."},
-  {lat: 41.9028, lng: 12.4964, place: "Rome, Italy", memory: "Walked through centuries of history in Rome."},
-  {lat: 40.8518, lng: 14.2681, place: "Naples, Italy", memory: "Tasted authentic pizza and visited Vesuvius in Naples."},
-  {lat: 53.3498, lng: -6.2603, place: "Dublin, Ireland", memory: "Listened to live music and enjoyed cozy pubs in Dublin."},
-  {lat: 25.5941, lng: 85.1376, place: "Patna, India", memory: "Visited family and explored the culture of Patna."},
-  {lat: 24.6951, lng: 84.9914, place: "Bodhgaya, India", memory: "Found peace at the Mahabodhi temple in Bodhgaya."},
-  {lat: 17.3850, lng: 78.4867, place: "Hyderabad, India", memory: "Savored biryani and saw the Charminar in Hyderabad."},
-  {lat: 27.1751, lng: 78.0421, place: "Agra, India", memory: "Marvelled at the beauty of the Taj Mahal in Agra."}
+      {lat: 52.5200, lng: 13.4050, place: "Berlin, Germany", memory: "Art, history, and vibrant city life in Berlin."},
+      {lat: 50.0755, lng: 14.4378, place: "Prague, Czech Republic", memory: "Charmed by the fairytale streets and old town of Prague."},
+      {lat: 48.2082, lng: 16.3738, place: "Vienna, Austria", memory: "Classical music, stunning palaces, and delicious coffee in Vienna."},
+      {lat: 54.4000, lng: 13.6167, place: "Binz, Germany", memory: "Relaxed by the Baltic Sea beaches in Binz."},
+      {lat: 52.3676, lng: 4.9041, place: "Amsterdam, Netherlands", memory: "Explored canals and art museums in Amsterdam."},
+      {lat: 51.0504, lng: 13.7373, place: "Dresden, Germany", memory: "Admired baroque architecture and river views in Dresden."},
+      {lat: 51.3397, lng: 12.3731, place: "Leipzig, Germany", memory: "Enjoyed live music and vibrant culture in Leipzig."},
+      {lat: 45.4408, lng: 12.3155, place: "Venice, Italy", memory: "Got lost in the magical alleys and canals of Venice."},
+      {lat: 41.9028, lng: 12.4964, place: "Rome, Italy", memory: "Walked through centuries of history in Rome."},
+      {lat: 40.8518, lng: 14.2681, place: "Naples, Italy", memory: "Tasted authentic pizza and visited Vesuvius in Naples."},
+      {lat: 53.3498, lng: -6.2603, place: "Dublin, Ireland", memory: "Listened to live music and enjoyed cozy pubs in Dublin."},
+      {lat: 25.5941, lng: 85.1376, place: "Patna, India", memory: "Visited family and explored the culture of Patna."},
+      {lat: 24.6951, lng: 84.9914, place: "Bodhgaya, India", memory: "Found peace at the Mahabodhi temple in Bodhgaya."},
+      {lat: 17.3850, lng: 78.4867, place: "Hyderabad, India", memory: "Savored biryani and saw the Charminar in Hyderabad."},
+      {lat: 27.1751, lng: 78.0421, place: "Agra, India", memory: "Marvelled at the beauty of the Taj Mahal in Agra."}
     ];
-    travels.forEach(t => {
-      L.marker([t.lat, t.lng]).addTo(map)
-        .bindPopup(`<b>${t.place}</b><br>${t.memory}`);
+
+    // Create features for each travel location
+    const features = travels.map(t => {
+      const feature = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([t.lng, t.lat])),
+        place: t.place,
+        memory: t.memory
+      });
+      return feature;
+    });
+
+    // Vector source and layer for markers
+    const vectorSource = new ol.source.Vector({
+      features: features
+    });
+    const markerStyle = new ol.style.Style({
+      image: new ol.style.Circle({
+        radius: 7,
+        fill: new ol.style.Fill({ color: 'red' }),
+        stroke: new ol.style.Stroke({ color: 'white', width: 2 })
+      })
+    });
+    const vectorLayer = new ol.layer.Vector({
+      source: vectorSource,
+      style: markerStyle
+    });
+
+    // Create the map
+    const map = new ol.Map({
+      target: 'map',
+      layers: [
+        new ol.layer.Tile({ source: new ol.source.OSM() }),
+        vectorLayer
+      ],
+      view: new ol.View({
+        center: ol.proj.fromLonLat([13, 48]),
+        zoom: 4
+      })
+    });
+
+    // Popup overlay
+    const overlay = new ol.Overlay({
+      element: document.createElement('div'),
+      positioning: 'bottom-center',
+      stopEvent: false,
+      offset: [0, -10]
+    });
+    map.addOverlay(overlay);
+
+    // Show popup on marker click
+    map.on('click', function(evt) {
+      const feature = map.forEachFeatureAtPixel(evt.pixel, ft => ft);
+      if (feature) {
+        const coordinate = evt.coordinate;
+        const place = feature.get('place');
+        const memory = feature.get('memory');
+        const popup = overlay.getElement();
+        popup.innerHTML = `<div style="background:white;border-radius:6px;padding:8px 14px;box-shadow:0 2px 8px #888;"><b>${place}</b><br>${memory}</div>`;
+        overlay.setPosition(coordinate);
+        popup.style.display = 'block';
+      } else {
+        overlay.getElement().style.display = 'none';
+      }
+    });
+
+    // Hide popup on map click elsewhere
+    map.on('pointermove', function (evt) {
+      if (evt.dragging) {
+        overlay.getElement().style.display = 'none';
+      }
     });
 
     // Copy email to clipboard
@@ -93,8 +155,11 @@
       const email = document.getElementById('email-link').textContent;
       navigator.clipboard.writeText(email);
       document.getElementById('copy-msg').textContent = 'Copied!';
-      setTimeout(() => { document.getElementById('copy-msg').textContent = ''; }, 1500);
+      setTimeout(() => {
+        document.getElementById('copy-msg').textContent = '';
+      }, 1500);
     }
+    window.copyEmail = copyEmail;
   </script>
 </body>
 </html>
