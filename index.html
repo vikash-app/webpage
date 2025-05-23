@@ -2,67 +2,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name's Personal Site</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>My World, My Story</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 </head>
 <body>
-  <aside class="sidebar">
-    <div class="avatar">
-      <img src="profile.jpg" alt="Your portrait">
-      <h2>Your Name</h2>
+  <header class="hero">
+    <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Your portrait" class="avatar">
+    <div class="hero-text">
+      <h1>Hello, I'm Vikash</h1>
+      <p>Curious explorer. Memory collector. Welcome to my story across the globe!</p>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#photos">Photos</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </aside>
+  </header>
+
   <main>
-    <section id="home" class="card center">
-      <h1>Welcome!</h1>
-      <p class="tagline">[A bright, personal greeting or tagline]</p>
+    <section class="section" id="travels">
+      <h2>🌍 Places I've Travelled</h2>
+      <div id="map"></div>
+      <div class="map-tip">Click a marker for memories!</div>
     </section>
-    <section id="about" class="card">
-      <h2>About Me</h2>
-      <p>[Your story, interests, or philosophy. This is not a resume!]</p>
-      <ul class="about-list">
-        <li>🌱 Hobby 1</li>
-        <li>🎨 Hobby 2</li>
-        <li>✨ Fun fact</li>
-      </ul>
-    </section>
-    <section id="photos" class="card">
-      <h2>Photos</h2>
-      <div class="photo-gallery">
-        <figure>
-          <img src="photo1.jpg" alt="Photo 1">
-          <figcaption>Photo Title 1</figcaption>
-        </figure>
-        <figure>
-          <img src="photo2.jpg" alt="Photo 2">
-          <figcaption>Photo Title 2</figcaption>
-        </figure>
-        <figure>
-          <img src="photo3.jpg" alt="Photo 3">
-          <figcaption>Photo Title 3</figcaption>
-        </figure>
-        <!-- Add more figures as needed -->
+
+    <section class="section" id="memories">
+      <h2>📷 Memories</h2>
+      <div class="gallery">
+        <div class="memory-card">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=400&q=80" alt="Swiss Alps">
+          <div class="caption">Summit at the Swiss Alps, 2024</div>
+        </div>
+        <div class="memory-card">
+          <img src="https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=400&q=80" alt="Tokyo Night">
+          <div class="caption">Neon lights in Tokyo, 2023</div>
+        </div>
+        <div class="memory-card">
+          <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=400&q=80" alt="Desert">
+          <div class="caption">Desert ride in Morocco, 2022</div>
+        </div>
+        <!-- Add more memories here -->
       </div>
     </section>
-    <section id="contact" class="card">
-      <h2>Contact</h2>
-      <p>Let's connect:</p>
-      <ul class="social-links">
-        <li><a href="#">Email</a></li>
-      </ul>
+
+    <section class="section contact" id="contact">
+      <h2>💌 Contact Me</h2>
+      <div class="contact-card">
+        <div class="email-label">Email:</div>
+        <a href="mailto:vikash@email.com" id="email-link">vikash@email.com</a>
+        <button onclick="copyEmail()" title="Copy Email" class="copy-btn">📋</button>
+      </div>
+      <div id="copy-msg"></div>
     </section>
-    <footer>
-      <p>© 2025 Your Name. All rights reserved.</p>
-    </footer>
   </main>
+
+  <footer>
+    <small>&copy; 2025 Vikash. Made with 🌏 and ☕</small>
+  </footer>
+
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script>
+    // Initialize the map
+    var map = L.map('map').setView([20, 0], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+      attribution: '© OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Example travel markers (add your own!)
+    const travels = [
+      {lat: 46.8182, lng: 8.2275, place: "Switzerland", memory: "Climbed the Alps in 2024. Breathtaking views!"},
+      {lat: 35.6895, lng: 139.6917, place: "Tokyo", memory: "Explored neon-lit nights in 2023."},
+      {lat: 31.7917, lng: -7.0926, place: "Morocco", memory: "Desert adventure and camel rides, 2022."}
+    ];
+    travels.forEach(t => {
+      L.marker([t.lat, t.lng]).addTo(map)
+        .bindPopup(`<b>${t.place}</b><br>${t.memory}`);
+    });
+
+    // Copy email to clipboard
+    function copyEmail() {
+      const email = document.getElementById('email-link').textContent;
+      navigator.clipboard.writeText(email);
+      document.getElementById('copy-msg').textContent = 'Copied!';
+      setTimeout(() => { document.getElementById('copy-msg').textContent = ''; }, 1500);
+    }
+  </script>
 </body>
 </html>
