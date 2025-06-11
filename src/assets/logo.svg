@@ -1,0 +1,13 @@
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <g>
+    <!-- Globe -->
+    <circle cx="24" cy="20" r="12" fill="#ff385c"/>
+    <ellipse cx="24" cy="20" rx="9" ry="12" fill="white" fill-opacity="0.7"/>
+    <!-- Pin -->
+    <path d="M24 11C27.866 11 31 14.134 31 18C31 22.418 24 29 24 29C24 29 17 22.418 17 18C17 14.134 20.134 11 24 11Z" fill="#fff"/>
+    <circle cx="24" cy="18" r="2.2" fill="#ff385c"/>
+  </g>
+  <text x="45" y="27" font-family="'Nunito', 'Montserrat', Arial, sans-serif" font-size="26" font-weight="bold" fill="#222">
+    vikash.app
+  </text>
+</svg>
