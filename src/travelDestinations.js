@@ -127,7 +127,7 @@ export const TravelDestinations = [
     description: "Trip to the city.",
   },
 {
-    id: 15A,
+    id: 15,
     title: "Agra",
     location: "Agra, IN",
     image: "/assets/beach.jpg",

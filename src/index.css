@@ -66,3 +66,17 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for light/dark theme switching */
+body {
+  font-family: 'Nunito', 'Montserrat', Arial, sans-serif;
+  background-color: #f7f7f7;
+  color: #222;
+}
+.dark body {
+  background-color: #292929;
+  color: #fff;
+}

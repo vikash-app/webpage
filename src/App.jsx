@@ -1,39 +1,31 @@
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
-import './App.css';
-import Navbar from "./components/Navbar";
+import TravelDestinations from "./pages/TravelDestinations";
+import DestinationDetail from "./pages/DestinationDetail";
+import TravelStories from "./pages/TravelStories";
+import Contact from "./pages/Contact";
+import NotFound from "./pages/NotFound";
+import "./index.css";
 
-
-function App() {
+export default function App() {
   return (
     <Router>
-      {/* Optional: Add a navigation bar */}
-      <nav style={{ marginBottom: "2rem" }}>
-        <Link to="/">Home</Link> | <Link to="/about">About</Link>
-      </nav>
-      {/* Optional: Keep the Vite/React logos */}
-      <div>
-        <a href="https://vite.dev" target="_blank" rel="noopener noreferrer">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank" rel="noopener noreferrer">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="min-h-screen bg-surface dark:bg-darkSurface transition-colors">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/travel-destinations" element={<TravelDestinations />} />
+          <Route path="/travel-destinations/:id" element={<DestinationDetail />} />
+          <Route path="/travel-stories" element={<TravelStories />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+      <Footer />
     </Router>
   );
 }
-
-
-export default App;
