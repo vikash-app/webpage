@@ -15,7 +15,7 @@ export default function App() {
     <Router>
       <Navbar />
       <div className="min-h-screen bg-surface dark:bg-darkSurface transition-colors">
-        <div className="bg-red-500 text-white p-8 text-4xl">TAILWIND TEST</div>
+        {/*<div className="bg-red-500 text-white p-8 text-4xl">TAILWIND TEST</div>*/}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />

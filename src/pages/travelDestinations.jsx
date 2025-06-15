@@ -1,6 +1,15 @@
-import { TravelDestinations } from "../travelDestinations";
+//import { TravelDestinations } from "../travelDestinations";
+import {useState} from "react";
+import TravelDestinations from "../travelDestinations"; // Import the travel destinations data
+import DestinationCard from "../components/DestinationCard";
+import SearchBar from "../components/SearchBar";
 
 function TravelDestinationsPage() {
+   const [search, setSearch] = useState("");
+  const filtered = travelDestinations.filter(dest =>
+    (dest.name && dest.name.toLowerCase().includes(search.toLowerCase())) ||
+    (dest.location && dest.location.toLowerCase().includes(search.toLowerCase()))
+  );
   return (
     <div style={{ padding: "2rem" }}>
       <h1>Travel Destinations</h1>

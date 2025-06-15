@@ -1,4 +1,4 @@
-export const TravelDestinations = [
+const TravelDestinations = [
   {
     id: 1,
     title: "Berlin",
@@ -136,3 +136,5 @@ export const TravelDestinations = [
     description: "Trip to the city.",
   }
 ];
+
+export default TravelDestinations;

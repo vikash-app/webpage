@@ -12,7 +12,7 @@ function About() {
       </ul>
       <p>
         Created and maintained by Vikash.<br />
-        <a href="mailto:vikashk7@icloud.com">Contact me</a>
+        <a href="mailto:Contact@vikash.app">Contact me</a>
       </p>
     </div>
   );
