@@ -19,6 +19,19 @@ export default function Home() {
           Discover stories behind remarkable journeys.<br />
           Explore destinations, maps, and inspiring travel stories.
         </p>
+        <div>
+      {/* Single map at the very top */}
+      <MapEmbed
+  locations={travelDestinations.map(dest => ({
+    latitude: dest.latitude,
+    longitude: dest.longitude,
+    title: dest.title || dest.name
+  }))}
+  center={{ latitude: 51.0, longitude: 10.0 }}
+  zoom={5}
+/>
+      {/* Your Search bar and other content here */}
+    </div>
         <SearchBar />
       </section>
       <section>
@@ -41,7 +54,7 @@ export default function Home() {
         </div>
       </section>
       {/* Optionally show a list of all destinations as links */}
-      <section className="mt-16">
+     {/* <section className="mt-16">
   <h2 className="text-2xl font-bold mb-4 text-cyan-600">All Destinations</h2>
   <ul className="grid md:grid-cols-2 gap-4">
     {travelDestinations.map(dest => (
@@ -60,7 +73,8 @@ export default function Home() {
       </li>
     ))}
   </ul>
-</section>
+</section>*/}
+
     </div>
   );
 }
