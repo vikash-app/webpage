@@ -19,20 +19,19 @@ export default function TravelStories() {
   ];
 
   return (
-    <div className="max-w-4xl mx-auto py-12 px-4">
-      <h1 className="text-3xl font-bold mb-8 text-primary">Travel Stories</h1>
-      <p className="mb-8 text-lg">
+     <div className="max-w-4xl mx-auto py-12 px-4">
+      <h1 className="text-3xl font-bold mb-8 text-cyan-700">Travel Stories</h1>
+      <p className="mb-8 text-lg text-gray-600">
         Dive into stories from around the world. More stories coming soon!
       </p>
       <div className="grid md:grid-cols-2 gap-8">
         {stories.map((story) => (
-          <div key={story.id} className="rounded-xl shadow-lg bg-white dark:bg-darkSurface overflow-hidden">
+          <div key={story.id} className="rounded-xl shadow-lg bg-gradient-to-br from-pink-50 via-white to-cyan-50 overflow-hidden border border-cyan-100 hover:shadow-2xl transition">
             <img src={story.image} alt={story.title} className="w-full h-48 object-cover" />
             <div className="p-5">
-              <h2 className="text-xl font-bold mb-2">{story.title}</h2>
-              <p className="mb-3 text-gray-700 dark:text-gray-200">{story.snippet}</p>
-              {/* In the future, link to story detail pages */}
-              <Link to="#" className="text-primary font-semibold hover:underline">Read more</Link>
+              <h2 className="text-xl font-bold mb-2 text-pink-700">{story.title}</h2>
+              <p className="mb-3 text-gray-700">{story.snippet}</p>
+              <Link to="#" className="text-cyan-600 font-semibold hover:underline">Read more</Link>
             </div>
           </div>
         ))}
