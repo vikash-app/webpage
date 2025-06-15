@@ -11,7 +11,7 @@ function Navbar() {
        <div className="flex gap-6 text-lg font-semibold">
         <Link to="/" className={pathname === "/" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Home</Link>
         <Link to="/travel-destinations" className={pathname.startsWith("/travel-destinations") ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Destinations</Link>
-        <Link to="/travel-stories" className={pathname === "/travel-stories" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Stories</Link>
+       {/*} <Link to="/travel-stories" className={pathname === "/travel-stories" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Stories</Link>*/}
         <Link to="/about" className={pathname === "/about" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>About</Link>
         <Link to="/contact" className={pathname === "/contact" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Contact</Link>
       </div>
