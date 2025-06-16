@@ -3,13 +3,14 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import TravelDestinationspage from "./pages/travelDestinations";
+//import TravelDestinationspage from "./pages/TravelDestinations";
+import TravelDestinationsPage from "./pages/TravelDestinations";
 import DestinationDetail from "./pages/DestinationDetail";
 import TravelStories from "./pages/TravelStories";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "./index.css";
-import TravelDestinationsPage from "./pages/travelDestinations";
+//import TravelDestinationsPage from "./pages/TravelDestinations";
 
 export default function App() {
   return (
