@@ -3,12 +3,13 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import TravelDestinations from "./pages/TravelDestinations";
+import TravelDestinationspage from "./pages/travelDestinations";
 import DestinationDetail from "./pages/DestinationDetail";
 import TravelStories from "./pages/TravelStories";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 import "./index.css";
+import TravelDestinationsPage from "./pages/travelDestinations";
 
 export default function App() {
   return (
@@ -19,7 +20,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/travel-destinations" element={<TravelDestinations />} />
+          <Route path="/travel-destinations" element={<TravelDestinationsPage />} />
           <Route path="/travel-destinations/:id" element={<DestinationDetail />} />
           <Route path="/travel-stories" element={<TravelStories />} />
           <Route path="/contact" element={<Contact />} />
