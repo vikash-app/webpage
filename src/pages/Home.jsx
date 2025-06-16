@@ -2,12 +2,13 @@ import React from "react";
 import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import DestinationCard from "../components/DestinationCard";
-import travelDestinations from "../travelDestinations"; // updated import (remove curly braces)
+//import travelDestinations from "../DestinationList"; // updated import (remove curly braces)
+import DestinationList from "../DestinationList";
 import MapEmbed from "../components/MapEmbed";
 
 export default function Home() {
   // Show three featured destinations for cards
-  const featured = travelDestinations.slice(0, 3);
+  const featured = DestinationList.slice(0, 3);
 
   return (
     <div className="max-w-5xl mx-auto py-16 px-4">
@@ -22,7 +23,7 @@ export default function Home() {
         <div>
       {/* Single map at the very top */}
       <MapEmbed
-  locations={travelDestinations.map(dest => ({
+  locations={DestinationList.map(dest => ({
     latitude: dest.latitude,
     longitude: dest.longitude,
     title: dest.title || dest.name

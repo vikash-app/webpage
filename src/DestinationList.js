@@ -1,4 +1,4 @@
-const TravelDestinations = [
+const DestinationList = [
   {
     id: 1,
     title: "Berlin",
@@ -139,7 +139,7 @@ const TravelDestinations = [
 
 /**
  * Represents a collection or list of travel destinations.
- * @module TravelDestinations
- * @exports TravelDestinations
+ * @module DestinationList
+ * @exports DestinationList
  */
-export default TravelDestinations;
+export default DestinationList;
