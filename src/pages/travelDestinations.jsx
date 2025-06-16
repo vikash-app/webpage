@@ -1,12 +1,12 @@
 //import { TravelDestinations } from "../travelDestinations";
 import {useState} from "react";
-import travelDestinations from "../travelDestinations"; // Import the travel destinations data
+import DestinationList from "../DestinationList"; // Import the travel destinations data
 import DestinationCard from "../components/DestinationCard";
 import SearchBar from "../components/SearchBar";
 
 function TravelDestinationsPage() {
    const [search, setSearch] = useState("");
-  const filtered = travelDestinations.filter(dest =>
+  const filtered = DestinationList.filter(dest =>
     (dest.name && dest.name.toLowerCase().includes(search.toLowerCase())) ||
     (dest.location && dest.location.toLowerCase().includes(search.toLowerCase()))
   );

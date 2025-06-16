@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom";
 //import { TravelDestinations } from "../travelDestinations";
-import TravelDestinations from "../travelDestinations";
+import TravelDestinations from "../DestinationList";
 import MapEmbed from "../components/MapEmbed";
 
 function DestinationDetail() {
