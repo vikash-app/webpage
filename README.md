@@ -1,51 +1,12 @@
-# Webpage
+# React + Vite
 
-Welcome to the **Webpage** repository!
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Overview
+Currently, two official plugins are available:
 
-This project is a simple web page project. It includes HTML and CSS files, and is intended as a starting point for learning or as a personal site.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Features
+## Expanding the ESLint configuration
 
-- Basic responsive HTML structure
-- Custom CSS styling
-
-## Getting Started
-
-1. **Clone the repository**
-   ```bash
-   git clone https://github.com/vikash-app/webpage.git
-   cd webpage
-   ```
-
-2. **Open `index.html` in your browser**
-
-No build step is required!
-
-## Project Structure
-
-```
-/
-├── index.html
-├── style.css
-├── .gitignore
-├── README.md
-└── LICENSE
-```
-
-## Contributing
-
-Contributions are welcome! To contribute:
-
-1. Fork this repository.
-2. Create a new branch (`git checkout -b feature/your-feature`).
-3. Commit your changes (`git commit -am 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature`).
-5. Open a pull request.
-
-Please use the provided issue and pull request templates.
-
-## License
-
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for more details.
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
