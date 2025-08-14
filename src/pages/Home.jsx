@@ -19,19 +19,18 @@ export default function Home() {
           Discover stories behind remarkable journeys.<br />
           Explore destinations, maps, and inspiring travel stories.
         </p>
-        <div>
-      {/* Single map at the very top */}
-      <MapEmbed
-  locations={travelDestinations.map(dest => ({
-    latitude: dest.latitude,
-    longitude: dest.longitude,
-    title: dest.title || dest.name
-  }))}
-  center={{ latitude: 51.0, longitude: 10.0 }}
-  zoom={5}
-/>
-      {/* Your Search bar and other content here */}
-    </div>
+        {/* Single map at the very top, showing all destinations */}
+        <div className="mb-8">
+          <MapEmbed
+            locations={travelDestinations.map(dest => ({
+              latitude: dest.latitude,
+              longitude: dest.longitude,
+              title: dest.title || dest.name,
+            }))}
+            center={{ latitude: 51.0, longitude: 10.0 }}
+            zoom={5}
+          />
+        </div>
         <SearchBar />
       </section>
       <section>
@@ -40,10 +39,7 @@ export default function Home() {
           {featured.map(dest => (
             <div key={dest.id}>
               <DestinationCard dest={dest} />
-              {/* Show a map for each featured destination */}
-              <div className="mt-4">
-                <MapEmbed lat={dest.latitude} lng={dest.latitude} title={dest.title || dest.name} />
-              </div>
+              {/* Per-destination maps intentionally omitted; images are used for each destination */}
             </div>
           ))}
         </div>

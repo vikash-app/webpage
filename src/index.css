@@ -26,8 +26,8 @@ body {
   margin: 0;
   min-width: 320px; /* Ensures minimum width for mobile devices */
   min-height: 100vh; /* Ensures minimum height for mobile devices */
-  {/* display: flex;
-  place-items: center;*/}
+  /* display: flex;
+  place-items: center; */
   min-width: 100vw;
   min-height: 100vh;
 }
@@ -68,10 +68,8 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
 
+/* Custom styles for light/dark theme switching */
 /* Custom styles for light/dark theme switching */
 body {
   font-family: 'Nunito', 'Montserrat', Arial, sans-serif;
