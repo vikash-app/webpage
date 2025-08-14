@@ -1,7 +1,8 @@
+import React from "react";
 import { useParams } from "react-router-dom";
 //import { TravelDestinations } from "../travelDestinations";
 import TravelDestinations from "../travelDestinations";
-import MapEmbed from "../components/MapEmbed";
+// import MapEmbed from "../components/MapEmbed";
 
 function DestinationDetail() {
   const { id } = useParams();
@@ -15,9 +16,7 @@ function DestinationDetail() {
         <p className="font-semibold">Location: {dest.location}</p>
         <p>{dest.description}</p>
       </div>
-      {dest.latitude && dest.longitude && (
-        <MapEmbed lat={dest.latitude} lng={dest.longitude} title={dest.title} />
-      )}
+  {/* Map removed per request; keeping the hero image only */}
     </div>
   );
 }

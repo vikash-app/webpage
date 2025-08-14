@@ -1,3 +1,4 @@
+import React from "react";
 //import { TravelDestinations } from "../travelDestinations";
 import {useState} from "react";
 import DestinationList from "../DestinationList"; // Import the travel destinations data

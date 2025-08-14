@@ -1,3 +1,4 @@
+import React from "react";
 function Footer() {
   return (
    <footer className="bg-gradient-to-r from-cyan-50 via-white to-pink-50 text-center py-8 mt-10 border-t border-pink-100">
