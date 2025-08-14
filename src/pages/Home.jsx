@@ -9,10 +9,13 @@ export default function Home() {
   // Show three featured destinations for cards
   const featured = travelDestinations.slice(0, 3);
 
+  React.useEffect(() => {
+    console.log('Home page mounted: Welcome to vikash.app should be visible');
+  }, []);
   return (
     <div className="max-w-5xl mx-auto py-16 px-4">
       <section className="text-center mb-12">
-        <h1 className="text-5xl font-extrabold mb-4 bg-gradient-to-r from-pink-500 to-cyan-500 text-transparent bg-clip-text">
+  <h1 className="text-5xl font-extrabold mb-4 text-pink-600 border-y-0 border-x-4 border-red-500 p-2 bg-white">
           Welcome to vikash.app
         </h1>
         <p className="text-lg mb-8 text-gray-700">

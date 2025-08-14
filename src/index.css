@@ -1,3 +1,7 @@
+/* Force gap for navbar menu if Tailwind gap is not working due to global styles */
+.force-gap-navbar > * + * {
+  margin-left: 2rem !important;
+}
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
