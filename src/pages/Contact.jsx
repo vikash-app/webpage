@@ -1,3 +1,4 @@
+import React from "react";
 export default function Contact() {
   return (
     <div className="max-w-lg mx-auto py-12 px-4">
