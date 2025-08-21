@@ -22,7 +22,7 @@ export default function App() {
           <Route path="/travel-destinations" element={<TravelDestinations />} />
           <Route path="/travel-destinations/:id" element={<DestinationDetail />} />
           <Route path="/travel-stories" element={<TravelStories />} />
-          <Route path="/contact" element={<Contact />} />
+            {/* <Route path="/contact" element={<Contact />} /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
       </div>

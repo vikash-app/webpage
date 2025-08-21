@@ -5,11 +5,7 @@ function About() {
       <p>
         <strong>vikash.app</strong> is a personal project designed to showcase beautiful travel destinations.
       </p>
-      <ul>
-       <li>Built with React + React Router</li>
-        <li>Simple, clean UI for a better browsing experience</li>
-        <li>Open to collaboration and feature suggestions!</li>
-      </ul>
+  {/* Removed technology and collaboration info as requested */}
       <p>
         Created and maintained by Vikash.<br />
         <a href="mailto:Contact@vikash.app">Contact me</a>
