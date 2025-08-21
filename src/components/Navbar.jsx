@@ -16,14 +16,11 @@ function Navbar() {
             <Link to="/" className={pathname === "/" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Home</Link>
             <Link to="/travel-destinations" className={pathname.startsWith("/travel-destinations") ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Destinations</Link>
             <Link to="/about" className={pathname === "/about" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>About</Link>
-            <Link to="/contact" className={pathname === "/contact" ? "text-pink-600 underline" : "text-gray-700 hover:text-pink-500 transition"}>Contact</Link>
           </div>
         </div>
         <div className="w-1/4"></div>
       </div>
-      <div className="flex justify-center w-full">
-        <h1 className="text-3xl font-bold text-pink-600 whitespace-nowrap">Welcome to Vikash.app</h1>
-      </div>
+  {/* Welcome message removed from Navbar; should only appear on Home page */}
     </nav>
   );
 }

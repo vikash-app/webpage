@@ -13,8 +13,8 @@ function TravelDestinations() {
   return (
     <div className="max-w-5xl mx-auto py-10 px-4">
       <h1 className="text-3xl font-bold mb-6">Travel Destinations</h1>
-      <SearchBar value={search} onChange={setSearch} />
-      <div className="grid md:grid-cols-3 gap-6 mt-8">
+  {/* SearchBar removed from Destinations page */}
+  <div className="grid grid-cols-3 gap-6 mt-8">
         {filtered.map(dest => <DestinationCard key={dest.id} dest={dest} />)}
       </div>
     </div>
