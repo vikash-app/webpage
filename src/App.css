@@ -3,11 +3,6 @@
   width: 100% !important;
   margin: 0 auto !important;
   padding: 0 !important;
-  text-align: center !important;
-  display: flex !important;
-  flex-direction: column !important;
-  align-items: center !important;
-  justify-content: center !important;
   min-height: 100vh !important;
   background-color: #faf7f2 !important;
   font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
