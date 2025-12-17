@@ -159,7 +159,8 @@ If partially released, you might need to:
 npm view package-name versions
 
 # For Python packages
-pip index versions package-name
+pip show package-name  # Shows installed version
+# Or check PyPI: https://pypi.org/project/package-name/
 
 # For Git tags
 git tag -l | grep v1.2.3
