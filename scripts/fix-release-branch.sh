@@ -6,7 +6,6 @@
 set -e
 
 # Colors for output
-RED='\033[0;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
 NC='\033[0m' # No Color
@@ -68,7 +67,7 @@ if git ls-remote --exit-code --tags origin "${RELEASE_REF}" >/dev/null 2>&1; the
     read -p "Do you want to delete the remote tag? (y/n) " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        git push origin :refs/tags/"${RELEASE_REF}"
+        git push origin ":refs/tags/${RELEASE_REF}"
         echo -e "${GREEN}✓ Deleted remote tag${NC}"
     fi
 fi
