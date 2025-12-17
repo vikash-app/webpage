@@ -10,3 +10,21 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## Release Management
+
+If you encounter release-related errors, such as:
+```
+Error: next/account already exists. You are probably trying to cut a version that was already cut
+```
+
+Please refer to our [Release Guide](RELEASE_GUIDE.md) for detailed troubleshooting steps and solutions.
+
+### Quick Fix
+
+You can also use our automated cleanup script:
+```bash
+./scripts/fix-release-branch.sh next/account
+```
+
+This will help you identify and remove any stale release branches or tags that are blocking your release process.
