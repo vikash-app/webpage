@@ -63,12 +63,12 @@ if git show-ref --verify --quiet "refs/tags/${RELEASE_REF}"; then
 fi
 
 # Check if it's a remote tag
-if git ls-remote --tags origin "refs/tags/${RELEASE_REF}" | grep -q "${RELEASE_REF}"; then
+if git ls-remote --tags origin "${RELEASE_REF}" | grep -q "${RELEASE_REF}"; then
     echo -e "${YELLOW}Found remote tag: ${RELEASE_REF}${NC}"
     read -p "Do you want to delete the remote tag? (y/n) " -n 1 -r
     echo
     if [[ $REPLY =~ ^[Yy]$ ]]; then
-        git push origin --delete "refs/tags/${RELEASE_REF}"
+        git push origin --delete "${RELEASE_REF}"
         echo -e "${GREEN}✓ Deleted remote tag${NC}"
     fi
 fi
