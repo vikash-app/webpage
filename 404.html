@@ -2,20 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Redirecting...</title>
-    <script>
-      // Single Page App redirect for GitHub Pages
-      // Converts the path into a query string so index.html can restore it
-      var pathSegmentsToKeep = 0;
-      var l = window.location;
-      l.replace(
-        l.protocol + '//' + l.hostname + (l.port ? ':' + l.port : '') +
-        l.pathname.split('/').slice(0, 1 + pathSegmentsToKeep).join('/') + '/?/' +
-        l.pathname.slice(1).split('/').slice(pathSegmentsToKeep).join('/').replace(/&/g, '~and~') +
-        (l.search ? '&' + l.search.slice(1).replace(/&/g, '~and~') : '') +
-        l.hash
-      );
-    </script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="vikash.app - Discover stories behind remarkable journeys. Explore travel destinations, interactive maps, and inspiring travel stories from around the world." />
+    <meta http-equiv="Content-Security-Policy" content="img-src 'self' data: https://*.tile.openstreetmap.org;">
+    <title>vikash.app - Travel Destinations & Stories</title>
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" sizes="48x48 64x64 128x128" />
+    <script type="module" crossorigin src="/assets/index-Dz8E7B_-.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-BCmtZenU.css">
   </head>
-  <body></body>
+  <body>
+    <div id="root"></div>
+  </body>
 </html>
