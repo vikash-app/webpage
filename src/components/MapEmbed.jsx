@@ -11,7 +11,6 @@ import 'leaflet/dist/leaflet.css';
  */
 function MapEmbed({ locations = [], center, zoom = 5 }) {
   if (!Array.isArray(locations) || locations.length === 0) {
-    console.warn('MapEmbed: No locations provided.');
     return null;
   }
 
@@ -20,7 +19,6 @@ function MapEmbed({ locations = [], center, zoom = 5 }) {
   );
 
   if (validLocations.length === 0) {
-    console.warn('MapEmbed: No valid coordinates in locations.');
     return null;
   }
 

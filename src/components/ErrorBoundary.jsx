@@ -11,8 +11,8 @@ class ErrorBoundary extends Component {
     return { hasError: true, error };
   }
 
-  componentDidCatch(error, errorInfo) {
-    console.error('Error caught by boundary:', error, errorInfo);
+  componentDidCatch() {
+    // Error details intentionally not logged in production
   }
 
   render() {
