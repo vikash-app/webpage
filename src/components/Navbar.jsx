@@ -20,7 +20,6 @@ function Navbar() {
         </div>
         <div className="w-1/4"></div>
       </div>
-  {/* Welcome message removed from Navbar; should only appear on Home page */}
     </nav>
   );
 }

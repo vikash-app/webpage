@@ -6,7 +6,7 @@ const TravelDestinations = [
   image: "/watermarked/Berlin.jpeg",
     latitude: 52.5200,
     longitude: 13.4050,
-    description: "A joyfull City.",
+    description: "A joyful city.",
     
   },
   {
