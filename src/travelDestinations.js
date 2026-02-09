@@ -3,11 +3,26 @@ const TravelDestinations = [
     id: 1,
     title: "Berlin",
     location: "Berlin, DE",
-  image: "/watermarked/Berlin.jpeg",
+    image: "/watermarked/Berlin.jpeg",
     latitude: 52.5200,
     longitude: 13.4050,
     description: "A joyful city.",
-    
+    content: {
+      about: [
+        "Berlin, the capital of Germany, is a city where history and modernity collide in the most fascinating ways. From the remnants of the Berlin Wall to the cutting-edge galleries of Museum Island, every corner tells a story of resilience and reinvention. The city's vibrant neighborhoods — Kreuzberg, Mitte, Prenzlauer Berg — each have their own distinct character, offering everything from world-class street food to underground techno clubs.",
+        "Beyond its rich history, Berlin is one of Europe's greenest capitals. The sprawling Tiergarten park, the serene Spree River, and countless lakes on the city's outskirts provide a refreshing escape from urban life. Whether you're cycling along tree-lined boulevards or relaxing in a riverside beer garden, nature is never far away.",
+        "Berlin's cultural scene is legendary. With over 170 museums, three opera houses, and a thriving street art culture, the city is a playground for creatives and culture enthusiasts alike. The cost of living remains more affordable than other major European capitals, making it a magnet for artists, startups, and travelers from around the world."
+      ],
+      highlights: [
+        { title: "Population", description: "Approximately 3.7 million residents" },
+        { title: "Best Time to Visit", description: "May to September for warm weather and outdoor festivals" },
+        { title: "Language", description: "German (English widely spoken)" },
+        { title: "Currency", description: "Euro (€)" },
+        { title: "Must See", description: "Brandenburg Gate, Museum Island, East Side Gallery" },
+        { title: "Known For", description: "History, nightlife, street art, and diverse food scene" }
+      ],
+      gallery: []
+    },
   },
   {
     id: 2,
