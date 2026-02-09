@@ -1,4 +1,5 @@
 import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import PropTypes from 'prop-types';
 import 'leaflet/dist/leaflet.css';
 
 /**
@@ -50,5 +51,26 @@ function MapEmbed({ locations = [], center, zoom = 5 }) {
     </MapContainer>
   );
 }
+
+MapEmbed.propTypes = {
+  locations: PropTypes.arrayOf(
+    PropTypes.shape({
+      latitude: PropTypes.number.isRequired,
+      longitude: PropTypes.number.isRequired,
+      title: PropTypes.string,
+    })
+  ),
+  center: PropTypes.shape({
+    latitude: PropTypes.number.isRequired,
+    longitude: PropTypes.number.isRequired,
+  }),
+  zoom: PropTypes.number,
+};
+
+MapEmbed.defaultProps = {
+  locations: [],
+  center: null,
+  zoom: 5,
+};
 
 export default MapEmbed;
