@@ -36,7 +36,7 @@ export default function Home() {
           ))}
         </div>
         <div className="mt-10 text-center w-full">
-          <Link to="/travel-destinations" className="bg-pink-500 hover:bg-cyan-500 text-white px-8 py-3 rounded-full font-bold text-lg shadow transition">
+          <Link to="/travel-destinations" className="bg-white hover:bg-red-50 !text-red-600 border-2 border-red-600 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
             Explore All Destinations
           </Link>
         </div>
