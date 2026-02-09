@@ -6,10 +6,12 @@ import SearchBar from "../components/SearchBar";
 
 function TravelDestinations() {
    const [search, setSearch] = useState("");
-  const filtered = DestinationList.filter(dest =>
-    (dest.name && dest.name.toLowerCase().includes(search.toLowerCase())) ||
-    (dest.location && dest.location.toLowerCase().includes(search.toLowerCase()))
-  );
+  const filtered = DestinationList
+    .filter(dest =>
+      (dest.title && dest.title.toLowerCase().includes(search.toLowerCase())) ||
+      (dest.location && dest.location.toLowerCase().includes(search.toLowerCase()))
+    )
+    .sort((a, b) => a.title.localeCompare(b.title));
   return (
     <div className="max-w-5xl mx-auto py-10 px-4">
       <h1 className="text-3xl font-bold mb-6">Travel Destinations</h1>
