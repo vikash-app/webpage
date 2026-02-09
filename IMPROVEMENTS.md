@@ -88,7 +88,7 @@ Added PropTypes to components:
 - Proper heading hierarchy maintained
 
 #### ARIA Labels
-- Added aria-label to email link: "Send an email to Contact@vikash.app"
+- Added aria-label to contact button: "Send an email"
 - Added aria-label to search input: "Search destinations"
 
 ### 7. Documentation

@@ -1,4 +1,10 @@
 function About() {
+  const handleContact = () => {
+    const user = "Contact";
+    const domain = "vikash.app";
+    window.location.href = `mailto:${user}@${domain}`;
+  };
+
   return (
     <main className="max-w-4xl mx-auto py-10 px-4">
       <article>
@@ -11,13 +17,14 @@ function About() {
           </p>
           <p className="text-gray-700 mb-4">
             Created and maintained by Vikash.<br />
-            <a 
-              href="mailto:Contact@vikash.app" 
-              className="text-pink-600 hover:text-cyan-500 transition underline"
-              aria-label="Send an email to Contact@vikash.app"
+            <button
+              type="button"
+              onClick={handleContact}
+              className="text-pink-600 hover:text-cyan-500 transition underline cursor-pointer bg-transparent border-none p-0 font-inherit text-inherit"
+              aria-label="Send an email"
             >
               Contact me
-            </a>
+            </button>
           </p>
         </section>
       </article>
