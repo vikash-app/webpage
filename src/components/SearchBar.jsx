@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+
 function SearchBar({ value, onChange }) {
   return (
     <input
@@ -10,4 +12,10 @@ function SearchBar({ value, onChange }) {
     />
   );
 }
+
+SearchBar.propTypes = {
+  value: PropTypes.string.isRequired,
+  onChange: PropTypes.func.isRequired,
+};
+
 export default SearchBar;
