@@ -85,7 +85,8 @@ function DestinationDetail() {
       <div className="max-w-6xl mx-auto px-4 pt-6">
         <Link
           to="/travel-destinations"
-          className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-red-600 bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full transition-all duration-200"
+          className="inline-flex items-center gap-1.5 text-base text-gray-700 bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:text-gray-900 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-200"
+          style={{ fontWeight: 800 }}
         >
           &larr; Back
         </Link>
