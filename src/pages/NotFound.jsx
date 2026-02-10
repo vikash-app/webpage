@@ -1,8 +1,15 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] py-12 px-4">
+      <SEO
+        title="Page Not Found"
+        description="The page you're looking for doesn't exist."
+        path="/404"
+        noIndex
+      />
       <img
         src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80"
         alt="Lost in travel"

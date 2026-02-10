@@ -2,6 +2,7 @@ import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import TravelDestinations from "../travelDestinations";
 import MapEmbed from "../components/MapEmbed";
+import SEO from "../components/SEO";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -38,8 +39,48 @@ function DestinationDetail() {
 
   const hasContent = !!dest.content;
 
+  const metaDescription = dest.content?.about?.[0]
+    ? dest.content.about[0].substring(0, 155).replace(/\s+\S*$/, '') + '...'
+    : `Explore ${dest.title} - ${dest.location}. ${dest.description}`;
+
+  const structuredData = [
+    {
+      "@context": "https://schema.org",
+      "@type": "Place",
+      "name": dest.title,
+      "description": metaDescription,
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": dest.title,
+        "addressCountry": dest.location.split(', ')[1] || ''
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": dest.latitude,
+        "longitude": dest.longitude
+      },
+      "image": `https://vikash.app${dest.image}`
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vikash.app/" },
+        { "@type": "ListItem", "position": 2, "name": "Travel Destinations", "item": "https://vikash.app/travel-destinations" },
+        { "@type": "ListItem", "position": 3, "name": dest.title, "item": `https://vikash.app/travel-destinations/${dest.id}` }
+      ]
+    }
+  ];
+
   return (
     <div className="min-h-screen bg-gray-50">
+      <SEO
+        title={`${dest.title}, ${dest.location}`}
+        description={metaDescription}
+        path={`/travel-destinations/${dest.id}`}
+        image={dest.image}
+        structuredData={structuredData}
+      />
       {/* Back Navigation */}
       <div className="max-w-6xl mx-auto px-4 pt-6">
         <Link

@@ -1,3 +1,5 @@
+import SEO from "../components/SEO";
+
 function About() {
   const handleContact = () => {
     const user = "Contact";
@@ -7,6 +9,11 @@ function About() {
 
   return (
     <main className="max-w-4xl mx-auto py-10 px-4">
+      <SEO
+        title="About"
+        description="Learn about vikash.app, a personal project showcasing beautiful travel destinations across Europe and Asia. Created and maintained by Vikash."
+        path="/about"
+      />
       <article>
         <h1 className="text-4xl font-bold mb-6 bg-gradient-to-r from-pink-500 to-cyan-500 text-transparent bg-clip-text">
           About This Site

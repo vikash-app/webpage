@@ -6,7 +6,7 @@ const TravelDestinations = [
     image: "/watermarked/Berlin.jpeg",
     latitude: 52.5200,
     longitude: 13.4050,
-    description: "A joyful city.",
+    description: "History, nightlife, and street art in Germany's vibrant capital.",
     content: {
       about: [
         "Berlin, the capital of Germany, is a city where history and modernity collide in the most fascinating ways. From the remnants of the Berlin Wall to the cutting-edge galleries of Museum Island, every corner tells a story of resilience and reinvention. The city's vibrant neighborhoods — Kreuzberg, Mitte, Prenzlauer Berg — each have their own distinct character, offering everything from world-class street food to underground techno clubs.",
@@ -31,7 +31,7 @@ const TravelDestinations = [
     image: "/watermarked/prague.jpeg",
     latitude: 50.0755,
     longitude: 14.4378,
-    description: "Experience city life.",
+    description: "Gothic spires, cobblestone streets, and vibrant beer culture in the Czech capital.",
     content: {
       about: [
         "Prague, the capital of the Czech Republic, is a fairy-tale city of cobblestone streets, Gothic spires, and Baroque palaces. The historic center, a UNESCO World Heritage Site, feels like stepping into a medieval painting — yet the city pulses with a youthful, creative energy that makes it one of Europe's most exciting destinations.",
@@ -56,7 +56,7 @@ const TravelDestinations = [
     image: "/watermarked/Vienna.jpeg",
     latitude: 48.2082,
     longitude: 16.3738,
-    description: "Enjoyed Historic Destinations.",
+    description: "Imperial palaces, classical music, and coffeehouse culture on the Danube.",
     content: {
       about: [
         "Vienna, the capital of Austria, is a city that breathes elegance and history at every turn. Once the seat of the mighty Habsburg Empire, its grand palaces, ornate opera houses, and majestic museums stand as testaments to centuries of cultural and political power. Schönbrunn Palace, the Hofburg, and St. Stephen's Cathedral are just a few of its architectural masterpieces.",
@@ -81,7 +81,7 @@ const TravelDestinations = [
     image: "/watermarked/Binz.jpeg",
     latitude: 54.4000,
     longitude: 13.6167,
-    description: "Enjoyed Beach and Forest trips.",
+    description: "White sandy beaches and beech forests on Germany's Baltic island of Ruegen.",
     content: {
       about: [
         "Binz is the largest and most popular seaside resort on the island of Rügen, Germany's largest island in the Baltic Sea. With its pristine white sandy beaches stretching for kilometers, elegant Bäderarchitektur (resort architecture) villas, and a long pier reaching into the sea, Binz offers a quintessential German coastal experience.",
@@ -106,7 +106,7 @@ const TravelDestinations = [
     image: "/watermarked/Amsterdam.jpeg",
     latitude: 52.3676,
     longitude: 4.9041,
-    description: "Short City trip.",
+    description: "Canals, world-class museums, and cycling culture in the Dutch capital.",
     content: {
       about: [
         "Amsterdam, the capital of the Netherlands, is a city built on water, with its iconic canal ring forming a crescent of tree-lined waterways, houseboats, and narrow bridges. The 17th-century canal district is a UNESCO World Heritage Site and gives the city its unmistakable character — a place where history floats alongside modern life.",
@@ -131,7 +131,7 @@ const TravelDestinations = [
     image: "/watermarked/Dresden.jpeg",
     latitude: 51.0504,
     longitude: 13.7373,
-    description: "Trip to the city.",
+    description: "Baroque splendor rebuilt along the Elbe, gateway to Saxon Switzerland.",
     content: {
       about: [
         "Dresden, the capital of Saxony, is one of Germany's most remarkable stories of rebirth. Once called the \"Florence on the Elbe\" for its stunning Baroque and Rococo architecture, the city was devastated during World War II and painstakingly rebuilt over decades. Today, its skyline of domes and spires along the Elbe River is as breathtaking as ever.",
@@ -156,7 +156,7 @@ const TravelDestinations = [
     image: "/watermarked/leipzig.jpeg",
     latitude: 51.3397,
     longitude: 12.3731,
-    description: "Trip to the city.",
+    description: "Music heritage and creative energy in Saxony's dynamic cultural hub.",
     content: {
       about: [
         "Leipzig is Saxony's largest city and one of Germany's most dynamic urban centers. With a rich history spanning over a thousand years, it was a cradle of the 1989 Peaceful Revolution that helped bring down the Berlin Wall. The city's motto, \"Leipzig kommt\" (Leipzig is coming), perfectly captures its forward-looking energy.",
@@ -181,7 +181,7 @@ const TravelDestinations = [
     image: "/watermarked/Venice.jpeg",
     latitude: 45.4408,
     longitude: 12.3155,
-    description: "Trip to the city.",
+    description: "A floating labyrinth of canals, bridges, and Renaissance art.",
     content: {
       about: [
         "Venice is a city like no other — built entirely on water across 118 small islands connected by over 400 bridges. Its labyrinth of narrow canals, hidden courtyards, and ornate palaces creates an atmosphere that feels suspended between dream and reality. The Grand Canal, lined with centuries of architectural splendor, is the city's magnificent main artery.",
@@ -206,7 +206,7 @@ const TravelDestinations = [
     image: "/watermarked/Rome.jpeg",
     latitude: 41.9028,
     longitude: 12.4964,
-    description: "Trip to the city.",
+    description: "Ancient ruins, Renaissance art, and la dolce vita in the Eternal City.",
     content: {
       about: [
         "Rome, the Eternal City, is a living museum spanning nearly 3,000 years of history. Walking its streets means passing from ancient Roman ruins to Renaissance masterpieces to vibrant modern life, often within the same block. The Colosseum, the Pantheon, and the Roman Forum are monuments not just to a city but to the foundations of Western civilization.",
@@ -231,7 +231,7 @@ const TravelDestinations = [
     image: "/watermarked/Naples.jpeg",
     latitude: 40.8518,
     longitude: 14.2681,
-    description: "Trip to the city.",
+    description: "Birthplace of pizza, gateway to Pompeii and the Amalfi Coast.",
     content: {
       about: [
         "Naples is southern Italy at its most intense, authentic, and unforgettable. Sprawling along the Bay of Naples with Mount Vesuvius looming in the background, the city is a sensory overload of narrow alleys, buzzing Vespas, hanging laundry, and the unmistakable aroma of wood-fired pizza — this is, after all, where pizza was invented.",
@@ -256,7 +256,7 @@ const TravelDestinations = [
     image: "/watermarked/Dublin.JPEG",
     latitude: 53.3498,
     longitude: -6.2603,
-    description: "Trip to the city.",
+    description: "Literary heritage, lively pubs, and warm hospitality in Ireland's capital.",
     content: {
       about: [
         "Dublin, Ireland's capital, is a city with an outsized personality. Compact enough to walk across in an hour yet rich enough to keep you exploring for weeks, it blends a thousand years of Viking, medieval, and Georgian history with a thoroughly modern creative scene. The River Liffey divides the city into its distinctive north and south sides, each with their own character.",
@@ -281,7 +281,7 @@ const TravelDestinations = [
     image: "/watermarked/Patna.JPEG",
     latitude: 25.5941,
     longitude: 85.1376,
-    description: "Trip to the city.",
+    description: "One of the world's oldest cities, gateway to Buddhist pilgrimage sites.",
     content: {
       about: [
         "Patna, the capital of Bihar, is one of the oldest continuously inhabited cities in the world. Known in ancient times as Pataliputra, it served as the capital of the great Maurya and Gupta empires — a period often called India's Golden Age. The city sits on the southern bank of the Ganges and has been a center of power, learning, and spirituality for over two millennia.",
@@ -306,7 +306,7 @@ const TravelDestinations = [
     image: "/watermarked/Bodhgaya.jpeg",
     latitude: 24.6950,
     longitude: 84.9914,
-    description: "Trip to the city.",
+    description: "Sacred birthplace of Buddhism beneath the ancient Bodhi Tree.",
     content: {
       about: [
         "Bodh Gaya is one of the most sacred places on Earth — it is here, under the Bodhi Tree, that Siddhartha Gautama attained enlightenment and became the Buddha around 2,500 years ago. The Mahabodhi Temple, a UNESCO World Heritage Site, marks this exact spot and draws millions of pilgrims and visitors from every corner of the world.",
@@ -331,7 +331,7 @@ const TravelDestinations = [
     image: "/watermarked/Hyd.JPEG",
     latitude: 17.3850,
     longitude: 78.4867,
-    description: "Trip to the city.",
+    description: "City of Pearls blending Nawabi heritage with India's tech frontier.",
     content: {
       about: [
         "Hyderabad, the capital of Telangana, is a city of magnificent contrasts — where 400-year-old monuments stand alongside gleaming tech campuses, and ancient bazaars coexist with modern malls. Founded in 1591 by the Qutb Shahi dynasty, the city grew into one of the richest in the world, earning the nickname \"City of Pearls\" for its legendary pearl and diamond trade.",
@@ -356,7 +356,7 @@ const TravelDestinations = [
     image: "/watermarked/Agra.jpeg",
     latitude: 27.1767,
     longitude: 78.0081,
-    description: "Trip to the city.",
+    description: "Home of the Taj Mahal and the grandeur of the Mughal Empire.",
     content: {
       about: [
         "Agra is home to the Taj Mahal, one of the Seven Wonders of the World and arguably the most beautiful building ever created. Built by Mughal Emperor Shah Jahan as a mausoleum for his beloved wife Mumtaz Mahal, the white marble monument is a masterpiece of symmetry, craftsmanship, and devotion. Seeing it at sunrise, glowing pink and gold against the morning sky, is a once-in-a-lifetime experience.",

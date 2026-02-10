@@ -3,12 +3,24 @@ import SearchBar from "../components/SearchBar";
 import DestinationCard from "../components/DestinationCard";
 import travelDestinations from "../travelDestinations";
 import MapEmbed from "../components/MapEmbed";
+import SEO from "../components/SEO";
 
 export default function Home() {
   const featured = travelDestinations.slice(0, 4);
 
   return (
     <div className="max-w-5xl mx-auto px-4">
+      <SEO
+        path="/"
+        description="Discover stories behind remarkable journeys. Explore 15+ travel destinations across Europe and Asia with interactive maps and inspiring travel stories."
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "vikash.app",
+          "url": "https://vikash.app",
+          "description": "Discover stories behind remarkable journeys. Explore travel destinations, interactive maps, and inspiring travel stories from around the world."
+        }}
+      />
       <section className="flex flex-col items-center gap-0">
         <h1 className="text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-cyan-500 text-transparent bg-clip-text" style={{ marginBottom: 0 }}>
           Welcome to vikash.app

@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 export default function TravelStories() {
   // You can replace this demo array with real blog post data later!
@@ -20,6 +21,11 @@ export default function TravelStories() {
 
   return (
      <div className="max-w-4xl mx-auto py-12 px-4">
+      <SEO
+        title="Travel Stories"
+        description="Dive into inspiring travel stories from around the world. Read about adventures in Bali, Rome, and more destinations."
+        path="/travel-stories"
+      />
       <h1 className="text-3xl font-bold mb-8 text-cyan-700">Travel Stories</h1>
       <p className="mb-8 text-lg text-gray-600">
         Dive into stories from around the world. More stories coming soon!
