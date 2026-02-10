@@ -17,7 +17,8 @@ function Navbar() {
         {/* Logo */}
         <div className="flex items-center md:w-1/4 justify-start">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="vikash.app logo" style={{ height: 32, marginRight: '1rem' }} />
+            <img src={logo} alt="vikash.app logo" style={{ height: 32 }} />
+            <span className="text-lg font-bold bg-gradient-to-r from-pink-500 to-cyan-500 text-transparent bg-clip-text">vikash.app</span>
           </Link>
         </div>
 

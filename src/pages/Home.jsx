@@ -22,13 +22,6 @@ export default function Home() {
         }}
       />
       <section className="flex flex-col items-center gap-0">
-        <h1 className="text-5xl font-extrabold bg-gradient-to-r from-pink-500 to-cyan-500 text-transparent bg-clip-text" style={{ marginBottom: 0 }}>
-          Welcome to vikash.app
-        </h1>
-        <p className="text-lg text-gray-700" style={{ marginTop: 0 }}>
-          Discover stories behind remarkable journeys.<br />
-          Explore destinations, maps, and inspiring travel stories.
-        </p>
         <MapEmbed
           locations={travelDestinations.map(dest => ({
             latitude: dest.latitude,
