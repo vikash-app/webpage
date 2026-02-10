@@ -31,7 +31,7 @@ function DestinationDetail() {
           to="/travel-destinations"
           className="text-red-600 hover:text-red-800 font-medium"
         >
-          &larr; Back to Destinations
+          &larr; Back
         </Link>
       </div>
     );
@@ -66,7 +66,7 @@ function DestinationDetail() {
       "@type": "BreadcrumbList",
       "itemListElement": [
         { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://vikash.app/" },
-        { "@type": "ListItem", "position": 2, "name": "Travel Destinations", "item": "https://vikash.app/travel-destinations" },
+        { "@type": "ListItem", "position": 2, "name": "Footprints", "item": "https://vikash.app/travel-destinations" },
         { "@type": "ListItem", "position": 3, "name": dest.title, "item": `https://vikash.app/travel-destinations/${dest.id}` }
       ]
     }
@@ -85,9 +85,9 @@ function DestinationDetail() {
       <div className="max-w-6xl mx-auto px-4 pt-6">
         <Link
           to="/travel-destinations"
-          className="inline-flex items-center text-gray-600 hover:text-red-600 transition-colors font-medium"
+          className="inline-flex items-center gap-1 text-sm font-medium text-gray-500 hover:text-red-600 bg-gray-100 hover:bg-red-50 px-3 py-1.5 rounded-full transition-all duration-200"
         >
-          &larr; Back to Destinations
+          &larr; Back
         </Link>
       </div>
 

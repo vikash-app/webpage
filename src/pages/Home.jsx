@@ -41,7 +41,7 @@ export default function Home() {
         <SearchBar />
       </section>
       <section className="w-full">
-        <h2 className="text-3xl font-bold mb-6 text-pink-600 text-center">Featured Destinations</h2>
+        <h2 className="text-3xl font-bold mb-6 text-pink-600 text-center">Featured Footprints</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full" style={{textAlign: 'initial'}}>
           {featured.map(dest => (
             <DestinationCard key={dest.id} dest={dest} />
@@ -49,7 +49,7 @@ export default function Home() {
         </div>
         <div className="mt-10 text-center w-full">
           <Link to="/travel-destinations" className="bg-white hover:bg-red-50 !text-red-600 border-2 border-red-600 px-8 py-3 rounded-full font-bold text-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            Explore All Destinations
+            Explore All Footprints
           </Link>
         </div>
       </section>

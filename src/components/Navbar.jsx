@@ -25,7 +25,7 @@ function Navbar() {
         <div className="hidden md:flex items-center justify-center md:w-2/4">
           <div className="flex text-lg font-semibold" style={{ gap: '3rem' }}>
             <Link to="/" className={linkClass("/")}>Home</Link>
-            <Link to="/travel-destinations" className={linkClass("/travel-destinations")}>Destinations</Link>
+            <Link to="/travel-destinations" className={linkClass("/travel-destinations")}>Footprints</Link>
             <Link to="/about" className={linkClass("/about")}>About</Link>
           </div>
         </div>
@@ -53,7 +53,7 @@ function Navbar() {
       {menuOpen && (
         <div className="md:hidden mt-4 flex flex-col items-center gap-4 text-lg font-semibold pb-2">
           <Link to="/" className={linkClass("/")} onClick={() => setMenuOpen(false)}>Home</Link>
-          <Link to="/travel-destinations" className={linkClass("/travel-destinations")} onClick={() => setMenuOpen(false)}>Destinations</Link>
+          <Link to="/travel-destinations" className={linkClass("/travel-destinations")} onClick={() => setMenuOpen(false)}>Footprints</Link>
           <Link to="/about" className={linkClass("/about")} onClick={() => setMenuOpen(false)}>About</Link>
         </div>
       )}

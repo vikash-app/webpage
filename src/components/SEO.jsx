@@ -17,7 +17,7 @@ export default function SEO({
 }) {
   const fullTitle = title
     ? `${title} | ${SITE_NAME}`
-    : `${SITE_NAME} - Travel Destinations & Stories`;
+    : `${SITE_NAME} - Footprints & Stories`;
   const canonicalUrl = `${BASE_URL}${path}`;
   const imageUrl = image.startsWith('http') ? image : `${BASE_URL}${image}`;
 

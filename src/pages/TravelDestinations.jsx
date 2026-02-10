@@ -15,18 +15,18 @@ function TravelDestinations() {
   return (
     <div className="max-w-5xl mx-auto py-10 px-4">
       <SEO
-        title="Travel Destinations"
+        title="Footprints"
         description="Browse 15 travel destinations across Europe and Asia including Berlin, Prague, Vienna, Rome, Venice, and more. Find your next adventure."
         path="/travel-destinations"
         structuredData={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          "name": "Travel Destinations",
+          "name": "Footprints",
           "description": "Browse 15 travel destinations across Europe and Asia.",
           "url": "https://vikash.app/travel-destinations"
         }}
       />
-      <h1 className="text-3xl font-bold mb-6">Travel Destinations</h1>
+      <h1 className="text-3xl font-bold mb-6">Footprints</h1>
       <SearchBar value={search} onChange={setSearch} />
       <div className="grid md:grid-cols-3 gap-6 mt-8">
         {filtered.map(dest => <DestinationCard key={dest.id} dest={dest} />)}
