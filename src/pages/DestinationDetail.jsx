@@ -1,5 +1,5 @@
 import { useParams, Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import TravelDestinations from "../travelDestinations";
 import MapEmbed from "../components/MapEmbed";
 import SEO from "../components/SEO";
@@ -26,7 +26,7 @@ function DestinationDetail() {
   if (!dest) {
     return (
       <div className="min-h-screen flex flex-col items-center justify-center p-10">
-        <p className="text-xl text-gray-600 mb-4">Destination not found.</p>
+        <p className="text-xl text-gray-600 dark:text-gray-400 mb-4">Destination not found.</p>
         <Link
           to="/travel-destinations"
           className="text-red-600 hover:text-red-800 font-medium"
@@ -73,7 +73,7 @@ function DestinationDetail() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       <SEO
         title={`${dest.title}, ${dest.location}`}
         description={metaDescription}
@@ -85,7 +85,7 @@ function DestinationDetail() {
       <div className="max-w-6xl mx-auto px-4 pt-6">
         <Link
           to="/travel-destinations"
-          className="inline-flex items-center gap-1.5 text-base text-gray-700 bg-gray-100 border border-gray-300 hover:bg-gray-200 hover:text-gray-900 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-200"
+          className="inline-flex items-center gap-1.5 text-base text-gray-700 dark:text-gray-200 bg-gray-100 dark:bg-gray-700 border border-gray-300 dark:border-gray-600 hover:bg-gray-200 hover:text-gray-900 px-4 py-2 rounded-full shadow-sm hover:shadow-md transition-all duration-200"
           style={{ fontWeight: 800 }}
         >
           &larr; Back
@@ -123,19 +123,19 @@ function DestinationDetail() {
         viewport={{ once: true, amount: 0.2 }}
         variants={fadeUp}
       >
-        <h2 className="text-3xl font-bold text-gray-900 mb-6">
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
           About {dest.title}
         </h2>
         {hasContent && dest.content.about ? (
           <div className="space-y-4">
             {dest.content.about.map((paragraph, i) => (
-              <p key={i} className="text-gray-700 leading-relaxed text-lg">
+              <p key={i} className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
                 {paragraph}
               </p>
             ))}
           </div>
         ) : (
-          <p className="text-gray-700 leading-relaxed text-lg">
+          <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
             {dest.description}
           </p>
         )}
@@ -151,7 +151,7 @@ function DestinationDetail() {
           variants={staggerContainer}
         >
           <motion.h2
-            className="text-3xl font-bold text-gray-900 mb-8 text-center"
+            className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center"
             variants={fadeIn}
           >
             Key Highlights
@@ -160,13 +160,13 @@ function DestinationDetail() {
             {dest.content.highlights.map((item, i) => (
               <motion.div
                 key={i}
-                className="bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100"
+                className="bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md transition-shadow border border-gray-100 dark:border-gray-700"
                 variants={fadeIn}
               >
                 <h3 className="text-sm font-semibold text-red-600 uppercase tracking-wide mb-2">
                   {item.title}
                 </h3>
-                <p className="text-gray-700">{item.description}</p>
+                <p className="text-gray-700 dark:text-gray-300">{item.description}</p>
               </motion.div>
             ))}
           </div>
@@ -182,8 +182,8 @@ function DestinationDetail() {
           viewport={{ once: true, amount: 0.2 }}
           variants={fadeUp}
         >
-          <h2 className="text-3xl font-bold text-gray-900 mb-6">Location</h2>
-          <div className="rounded-xl overflow-hidden shadow-sm border border-gray-100">
+          <h2 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">Location</h2>
+          <div className="rounded-xl overflow-hidden shadow-sm border border-gray-100 dark:border-gray-700">
             <MapEmbed
               locations={[
                 {
