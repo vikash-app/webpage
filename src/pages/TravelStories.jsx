@@ -1,46 +1,49 @@
 import { Link } from "react-router-dom";
+import travelStories from "../travelStories";
+import StoriesTabBar from "../components/StoriesTabBar";
 import SEO from "../components/SEO";
 
 export default function TravelStories() {
-  // You can replace this demo array with real blog post data later!
-  const stories = [
-    {
-      id: "bali-sunrise",
-      title: "Chasing the Sunrise in Bali",
-      snippet: "An unforgettable morning among Bali’s rice terraces and volcanoes.",
-      image: "https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=600&q=80",
-    },
-    {
-      id: "rome-food",
-      title: "A Foodie’s Walk Through Rome",
-      snippet: "The best gelato, pasta, and pizza in the Eternal City.",
-      image: "https://images.unsplash.com/photo-1465101046530-73398c7f28ca?auto=format&fit=crop&w=600&q=80",
-    },
-    // Add more stories as you go!
-  ];
+  const stories = [...travelStories].sort((a, b) => b.date.localeCompare(a.date));
 
   return (
-     <div className="max-w-4xl mx-auto py-12 px-4">
+    <div className="max-w-5xl mx-auto py-10 px-4">
       <SEO
-        title="Travel Stories"
-        description="Dive into inspiring travel stories from around the world. Read about adventures in Bali, Rome, and more destinations."
+        title="Stories"
+        description="Dive into inspiring travel stories from destinations across Europe and Asia."
         path="/travel-stories"
       />
-      <h1 className="text-3xl font-bold mb-8 text-cyan-700">Travel Stories</h1>
-      <p className="mb-8 text-lg text-gray-600">
-        Dive into stories from around the world. More stories coming soon!
-      </p>
-      <div className="grid md:grid-cols-2 gap-8">
-        {stories.map((story) => (
-          <div key={story.id} className="rounded-xl shadow-lg bg-gradient-to-br from-pink-50 via-white to-cyan-50 overflow-hidden border border-cyan-100 hover:shadow-2xl transition">
-            <img src={story.image} alt={story.title} className="w-full h-48 object-cover" />
-            <div className="p-5">
-              <h2 className="text-xl font-bold mb-2 text-pink-700">{story.title}</h2>
-              <p className="mb-3 text-gray-700">{story.snippet}</p>
-              <Link to="#" className="text-cyan-600 font-semibold hover:underline">Read more</Link>
-            </div>
-          </div>
-        ))}
+      <h1 className="text-3xl font-bold mb-2">Stories</h1>
+      <StoriesTabBar />
+      <div className="grid md:grid-cols-2 gap-8 mt-8">
+        {stories.map((story) => {
+          const formattedDate = new Date(story.date).toLocaleDateString("en-US", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+          return (
+            <Link to={`/travel-stories/${story.id}`} key={story.id} className="group">
+              <div className="rounded-xl shadow-sm bg-white dark:bg-gray-800 overflow-hidden border border-gray-100 dark:border-gray-700 hover:shadow-lg transition-shadow">
+                <img
+                  src={story.coverImage}
+                  alt={story.title}
+                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+                <div className="p-5">
+                  <time className="text-sm text-gray-400 dark:text-gray-500">{formattedDate}</time>
+                  <h2 className="text-xl font-bold mb-2 text-gray-900 dark:text-white group-hover:text-pink-600 transition-colors">
+                    {story.title}
+                  </h2>
+                  <p className="mb-3 text-gray-600 dark:text-gray-400">{story.snippet}</p>
+                  <span className="text-pink-600 font-semibold text-sm">
+                    Read more &rarr;
+                  </span>
+                </div>
+              </div>
+            </Link>
+          );
+        })}
       </div>
     </div>
   );

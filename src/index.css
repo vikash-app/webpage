@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -74,7 +76,8 @@ body {
   background-color: #f7f7f7;
   color: #222;
 }
+
 .dark body {
-  background-color: #292929;
-  color: #fff;
+  background-color: #1a1a2e;
+  color: #e0e0e0;
 }

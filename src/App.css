@@ -4,12 +4,16 @@
   margin: 0 auto !important;
   padding: 0 !important;
   min-height: 100vh !important;
-  background-color: #faf7f2 !important;
+  background-color: #faf7f2;
   font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif !important;
   color: #21234c !important;
   font-size: 1.2rem !important;
   line-height: 1.6 !important;
-  padding: 0 !important;
+}
+
+.dark #root {
+  background-color: #1a1a2e;
+  color: #e0e0e0 !important;
 }
 
 .logo {

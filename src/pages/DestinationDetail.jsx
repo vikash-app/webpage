@@ -1,6 +1,9 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion"; // eslint-disable-line no-unused-vars
 import TravelDestinations from "../travelDestinations";
+import galleryData from "../galleryData";
+import LightboxModal from "../components/LightboxModal";
 import MapEmbed from "../components/MapEmbed";
 import SEO from "../components/SEO";
 
@@ -22,6 +25,8 @@ const fadeIn = {
 function DestinationDetail() {
   const { id } = useParams();
   const dest = TravelDestinations.find((d) => d.id === Number(id));
+  const photos = galleryData.filter((p) => p.destinationId === Number(id));
+  const [selectedIndex, setSelectedIndex] = useState(null);
 
   if (!dest) {
     return (
@@ -170,6 +175,52 @@ function DestinationDetail() {
               </motion.div>
             ))}
           </div>
+        </motion.section>
+      )}
+
+      {/* Gallery Section */}
+      {photos.length > 0 && (
+        <motion.section
+          className="max-w-6xl mx-auto px-4 pb-12"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, amount: 0.2 }}
+          variants={staggerContainer}
+        >
+          <motion.h2
+            className="text-3xl font-bold text-gray-900 dark:text-white mb-8 text-center"
+            variants={fadeIn}
+          >
+            Gallery
+          </motion.h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+            {photos.map((photo, i) => (
+              <motion.div
+                key={photo.id}
+                className="cursor-pointer"
+                whileHover={{ scale: 1.02 }}
+                variants={fadeIn}
+                onClick={() => setSelectedIndex(i)}
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full rounded-xl shadow-md"
+                  loading="lazy"
+                />
+              </motion.div>
+            ))}
+          </div>
+          {selectedIndex !== null && (
+            <LightboxModal
+              photo={photos[selectedIndex]}
+              onClose={() => setSelectedIndex(null)}
+              onPrev={() => setSelectedIndex((idx) => Math.max(0, idx - 1))}
+              onNext={() => setSelectedIndex((idx) => Math.min(photos.length - 1, idx + 1))}
+              hasPrev={selectedIndex > 0}
+              hasNext={selectedIndex < photos.length - 1}
+            />
+          )}
         </motion.section>
       )}
 

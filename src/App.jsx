@@ -7,10 +7,8 @@ import Home from "./pages/Home";
 import "./index.css";
 
 // Lazy load less critical pages
-const About = lazy(() => import("./pages/About"));
 const TravelDestinations = lazy(() => import("./pages/TravelDestinations"));
 const DestinationDetail = lazy(() => import("./pages/DestinationDetail"));
-const TravelStories = lazy(() => import("./pages/TravelStories"));
 const NotFound = lazy(() => import("./pages/NotFound"));
 
 // Loading component
@@ -34,10 +32,8 @@ export default function App() {
           <Suspense fallback={<Loading />}>
             <Routes>
               <Route path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
               <Route path="/travel-destinations" element={<TravelDestinations />} />
               <Route path="/travel-destinations/:id" element={<DestinationDetail />} />
-              <Route path="/travel-stories" element={<TravelStories />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>

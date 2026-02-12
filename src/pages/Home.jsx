@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import SearchBar from "../components/SearchBar";
 import DestinationCard from "../components/DestinationCard";
+import TravelStats from "../components/TravelStats";
+import TimelineSection from "./Timeline";
 import travelDestinations from "../travelDestinations";
 import MapEmbed from "../components/MapEmbed";
 import SEO from "../components/SEO";
@@ -33,6 +35,7 @@ export default function Home() {
         />
         <SearchBar />
       </section>
+      <TravelStats />
       <section className="w-full">
         <h2 className="text-3xl font-bold mb-6 text-pink-600 text-center">Featured Footprints</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full" style={{textAlign: 'initial'}}>
@@ -46,6 +49,7 @@ export default function Home() {
           </Link>
         </div>
       </section>
+      <TimelineSection />
     </div>
   );
 }

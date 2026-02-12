@@ -8,11 +8,6 @@ const fadeIn = {
 };
 
 export default function TimelineItem({ event, isLeft }) {
-  const formattedDate = new Date(event.date + "-01").toLocaleDateString("en-US", {
-    year: "numeric",
-    month: "long",
-  });
-
   return (
     <motion.div
       className="relative flex items-center mb-10"
@@ -24,7 +19,6 @@ export default function TimelineItem({ event, isLeft }) {
       {/* Desktop: alternating layout */}
       <div className={`hidden md:flex w-full items-center ${isLeft ? "flex-row" : "flex-row-reverse"}`}>
         <div className={`w-5/12 ${isLeft ? "text-right pr-8" : "text-left pl-8"}`}>
-          <time className="text-sm font-semibold text-pink-600">{formattedDate}</time>
           <p className="text-xs text-gray-400 capitalize">{event.type}</p>
         </div>
         <div className="flex flex-col items-center">
@@ -47,9 +41,8 @@ export default function TimelineItem({ event, isLeft }) {
           <div className="w-3 h-3 rounded-full bg-gradient-to-r from-pink-500 to-cyan-500 z-10 ring-4 ring-gray-50 dark:ring-gray-900" />
         </div>
         <div className="flex-1">
-          <time className="text-xs font-semibold text-pink-600">{formattedDate}</time>
           <Link to={event.link}>
-            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-3 mt-1 border border-gray-100 dark:border-gray-700">
+            <div className="bg-white dark:bg-gray-800 rounded-xl shadow-sm hover:shadow-md transition-shadow p-3 border border-gray-100 dark:border-gray-700">
               <img src={event.image} alt={event.title} className="w-full h-28 object-cover rounded-lg mb-2" />
               <h3 className="font-bold text-gray-900 dark:text-white text-sm mb-1">{event.title}</h3>
               <p className="text-xs text-gray-600 dark:text-gray-400 line-clamp-2">{event.description}</p>

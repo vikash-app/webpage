@@ -19,10 +19,10 @@ function About() {
           About This Site
         </h1>
         <section className="prose prose-lg max-w-none">
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             <strong className="text-pink-600">vikash.app</strong> is a personal project designed to showcase beautiful travel destinations.
           </p>
-          <p className="text-gray-700 mb-4">
+          <p className="text-gray-700 dark:text-gray-300 mb-4">
             Created and maintained by Vikash.<br />
             <button
               type="button"
