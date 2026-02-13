@@ -26,6 +26,7 @@ export default function Home() {
       <section className="flex flex-col items-center gap-0">
         <MapEmbed
           locations={travelDestinations.map(dest => ({
+            id: dest.id,
             latitude: dest.latitude,
             longitude: dest.longitude,
             title: dest.title || dest.name
