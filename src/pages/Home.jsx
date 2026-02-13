@@ -30,8 +30,6 @@ export default function Home() {
             longitude: dest.longitude,
             title: dest.title || dest.name
           }))}
-          center={{ latitude: 51.0, longitude: 10.0 }}
-          zoom={5}
         />
         <SearchBar />
       </section>

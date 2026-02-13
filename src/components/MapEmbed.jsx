@@ -1,6 +1,18 @@
-import { MapContainer, TileLayer, Marker, Popup } from 'react-leaflet';
+import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import PropTypes from 'prop-types';
 import 'leaflet/dist/leaflet.css';
+import L from 'leaflet';
+
+function FitBounds({ locations }) {
+  const map = useMap();
+  const bounds = L.latLngBounds(locations.map(loc => [loc.latitude, loc.longitude]));
+  map.fitBounds(bounds, { padding: [30, 30] });
+  return null;
+}
+
+FitBounds.propTypes = {
+  locations: PropTypes.array.isRequired,
+};
 
 /**
  * Displays a single map with markers for all locations.
@@ -22,7 +34,7 @@ function MapEmbed({ locations = [], center, zoom = 5 }) {
     return null;
   }
 
-  // Use provided center or center on the first valid location
+  // Use provided center or fit all markers
   const mapCenter = center
     ? [center.latitude, center.longitude]
     : [validLocations[0].latitude, validLocations[0].longitude];
@@ -34,6 +46,7 @@ function MapEmbed({ locations = [], center, zoom = 5 }) {
       scrollWheelZoom={false}
       style={{ height: 300, width: '100%' }}
     >
+      {!center && <FitBounds locations={validLocations} />}
       <TileLayer
         attribution='&copy; OpenStreetMap contributors'
         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"

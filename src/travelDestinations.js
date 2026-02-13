@@ -433,6 +433,35 @@ const TravelDestinations = [
       ],
       gallery: []
     },
+  },
+  {
+    id: 16,
+    title: "Scharbeutz",
+    location: "Scharbeutz, DE",
+    image: "/watermarked/Scharbeutz.jpeg",
+    latitude: 54.0236,
+    longitude: 10.7478,
+    description: "Sun-kissed Baltic beach town with a lively promenade and sweeping sea views.",
+    country: "Germany",
+    region: "Europe",
+    tags: ["beach", "nature"],
+    visitDate: "2025",
+    content: {
+      about: [
+        "Scharbeutz is one of the most beloved seaside resorts along Germany's Baltic coast in Schleswig-Holstein. With its wide, fine-sand beach stretching for kilometers, a vibrant seafront promenade, and the gentle waves of the Lübeck Bay, it has been drawing visitors seeking relaxation and coastal charm for over a century.",
+        "The town strikes a perfect balance between lively resort atmosphere and natural tranquility. The modern promenade is lined with restaurants, cafés, and beach bars serving fresh fish rolls and local specialties, while Strandkörbe — the iconic hooded wicker beach chairs — dot the shoreline in neat rows. Just inland, the rolling hills of Holstein Switzerland offer cycling and walking trails through lush countryside.",
+        "Scharbeutz is part of the broader Lübecker Bucht resort area, neighboring Timmendorfer Strand and within easy reach of the UNESCO-listed Hanseatic city of Lübeck. Whether you're watching a Baltic sunset from the pier, exploring the SEA LIFE aquarium, or simply letting the sea breeze wash away the everyday, Scharbeutz delivers the quintessential German coastal holiday experience."
+      ],
+      highlights: [
+        { title: "Population", description: "Approximately 11,000 residents" },
+        { title: "Best Time to Visit", description: "June to September for warm beach weather and long days" },
+        { title: "Language", description: "German" },
+        { title: "Currency", description: "Euro (€)" },
+        { title: "Must See", description: "Scharbeutz Beach & Pier, Ostsee Therme, nearby Lübeck Old Town" },
+        { title: "Known For", description: "Sandy Baltic beaches, Strandkörbe, seafood, and coastal promenades" }
+      ],
+      gallery: []
+    },
   }
 ];
 
